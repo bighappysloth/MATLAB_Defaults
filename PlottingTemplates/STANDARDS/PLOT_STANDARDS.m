@@ -171,6 +171,9 @@ function PS = PLOT_STANDARDS()
     PS.Purple3 = [40, 55, 71]./255;
     PS.Purple4 = [28, 40, 51]./255;
     PS.Purple5 = [23, 32, 42]./255;
+
+    PS.tab_orange   = '#ff7f0f';
+    PS.tab_blue     = '#1f77b4';
    
     
     %========================================================
