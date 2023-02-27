@@ -30,20 +30,20 @@ function PS = PLOT_STANDARDS()
         PS.PlotTextFont = 'Yu Mincho';
     end
 
-    PS.DefaultFont = 'Yu Mincho';
-    PS.AxisNumbersFontName = 'Yu Mincho';
-    PS.AxisFont = 'Yu Mincho';
-    PS.LegendFont = 'Yu Mincho';
-    PS.TitleFont = 'Yu Mincho';
-    PS.PlotTextFont = 'Yu Mincho';
+    PS.DefaultFont = 'Times';
+    PS.AxisNumbersFontName = 'Times';
+    PS.AxisFont = 'Times';
+    PS.LegendFont = 'Times';
+    PS.TitleFont = 'Times';
+    PS.PlotTextFont = 'Times';
 
 
     % Font size properties
-    PS.TitleFontSize = 28;
-    PS.LegendFontSize = 20;
-    PS.AxisFontSize = 24;
-    PS.PlotTextFontSize = 20;
-    PS.AxisNumbersFontSize = 18;
+    PS.TitleFontSize = 8;
+    PS.LegendFontSize = 6;
+    PS.AxisFontSize = 8;
+    PS.PlotTextFontSize = 8;
+    PS.AxisNumbersFontSize = 8;
     
     
     % Tiled Properties
@@ -172,9 +172,18 @@ function PS = PLOT_STANDARDS()
     PS.Purple4 = [28, 40, 51]./255;
     PS.Purple5 = [23, 32, 42]./255;
 
-    PS.tab_orange   = '#ff7f0f';
-    PS.tab_blue     = '#1f77b4';
-   
+    %PS.tab_orange   = '#ff7f0f';
+    %PS.tab_blue     = '#1f77b4';
+    PS.tab_blue = '#5778a4';
+    PS.tab_orange = '#e49444';
+    PS.tab_red = '#d1615d';
+    PS.tab_teal = '#85b6b2';
+    PS.tab_green = '#6a9f58';
+    PS.tab_yellow = '#e7ca60';
+    PS.tab_purple = '#a87c9f';
+    PS.tab_pink = '#f1a2a9';
+    PS.tab_brown = '#967662';
+    PS.tab_grey = '#b8b0ac';
     
     %========================================================
     % LINE AND MARKER PROPERTIES
@@ -182,7 +191,7 @@ function PS = PLOT_STANDARDS()
     % LineStyles
     % '-', '--', ':', '-.'
     PS.DefaultLineStyle = '-';
-    PS.DefaultLineWidth = 1.5;
+    PS.DefaultLineWidth = 0.75;
 
     % MarkerStyles
     % 'o', '+', '*', 'x', 's'->squares, 'd'->diamonds, 'v'->triangles
