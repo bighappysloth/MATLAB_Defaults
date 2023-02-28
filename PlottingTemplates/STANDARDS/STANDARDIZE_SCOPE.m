@@ -6,16 +6,59 @@ function figure = STANDARDIZE_SCOPE(h)
 
     set(h,'PaperPositionMode','auto'); % set paper position to match figure size
 
-    lines = findobj(h, 'Type', 'Line');
-    set(lines, 'Color', PS.tab_orange);
-    set(lines, 'LineWidth', 2);
+    lines = findall(h, 'Type', 'Line');
+    stairs = findall(h, 'Type', 'stair');
+    
+    % Checks if the current scope has stairs instead of lines.
+    % This occurs when it is the output of sampling... Matlab outputs stairs instead of lines
+    % Lines are responsible for peak-finder, etc.
+    % More care is needed to filter out those lines, perhaps by checking the DisplayName.
+    
+    if numel(stairs)>=1
+        line_labels = cell(numel(stairs), 1);
+        for i = 1:numel(stairs)
+            set(stairs(i), 'Color', PS.tab_colours{i});
+            set(stairs(i), 'LineWidth', 1.5);
+            
+            line_labels{i} = stairs(i).DisplayName;
+            
+        end
+        legend(stairs, line_labels);
+    else
+        line_labels = cell(numel(lines), 1);
+        for i = 1:numel(lines)
+        
+            set(lines(i), 'Color', PS.tab_colours{i});
+            set(lines(i), 'LineWidth', 1.5);
+            line_labels{i} = lines(i).DisplayName;
+            
+        end
+        legend(lines, line_labels);
+    end
+    axis('equal', 'tight'); % Zoom out the plot so all data fits.
+    
+    
 
+    % Fix Legend Font size
+    legendobj = findobj(h, 'Type', 'legend');
+    set(legendobj, 'Color',     [0 0 0]);
+    set(legendobj, 'TextColor', [0 0 0]);
+    set(legendobj, 'FontName', PS.LegendFont);
+    set(legendobj, 'FontSize', PS.LegendFontSize);
+    
+    legend('location', 'northeast');
+
+    % Fix Fonts
     text_objects = findall(h, 'Type', 'text');
     set(text_objects, 'Color', [0 0 0]);
 
     % Grab Axes from the Figure Handle.
     ax = findobj(h, 'Type', 'axes');
 
+
+    
+
+    % Fix Panel
     ui_panel = findobj(h, 'Type', 'uipanel');
     set(ui_panel, 'BackgroundColor', [1 1 1])
     set(ui_panel, 'ForegroundColor', [1 1 1])
@@ -41,7 +84,11 @@ function figure = STANDARDIZE_SCOPE(h)
     ax.YLabel.FontWeight = 'normal';
     ax.ZLabel.FontWeight = 'normal';
 
-    ax.Box = 'off';
+    % xlabel('X-Axis Label', 'Units', 'normalized', 'Position', [0.5, -0.1, 0]);
+    % ylabel('Y-Axis Label', 'Units', 'normalized', 'Position', [-0.1, 0.5, 0]);
+
+
+    ax.Box = 'on';
     
     %===============================
     % Tickmarks

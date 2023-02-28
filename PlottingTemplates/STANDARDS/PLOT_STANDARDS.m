@@ -30,6 +30,7 @@ function PS = PLOT_STANDARDS()
         PS.PlotTextFont = 'Yu Mincho';
     end
 
+    % Changed the Default Fonts.
     PS.DefaultFont = 'Times';
     PS.AxisNumbersFontName = 'Times';
     PS.AxisFont = 'Times';
@@ -184,6 +185,8 @@ function PS = PLOT_STANDARDS()
     PS.tab_pink = '#f1a2a9';
     PS.tab_brown = '#967662';
     PS.tab_grey = '#b8b0ac';
+    
+    PS.tab_colours = {PS.tab_blue, PS.tab_orange, PS.tab_red, PS.tab_teal, PS.tab_green, PS.tab_yellow, PS.tab_purple, PS.tab_pink, PS.tab_brown, PS.tab_grey};
     
     %========================================================
     % LINE AND MARKER PROPERTIES
