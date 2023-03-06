@@ -1,5 +1,5 @@
-function fig_files = find_files_by_ext(ext)
-    dir_result = dir('EXP'); % list all files in the directory
+function fig_files = find_files_by_ext(ext,dir_name)
+    dir_result = dir(dir_name); % list all files in the directory
     fig_files = {}; % initialize an empty cell array
 
     for i=1:length(dir_result)
