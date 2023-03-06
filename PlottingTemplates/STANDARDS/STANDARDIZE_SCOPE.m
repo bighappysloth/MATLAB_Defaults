@@ -1,4 +1,4 @@
-function figure = STANDARDIZE_SCOPE(h)
+function STANDARDIZE_SCOPE(h)
 
     PS = PLOT_STANDARDS();
 
@@ -35,7 +35,7 @@ function figure = STANDARDIZE_SCOPE(h)
         end
         legend(lines, line_labels);
     end
-    axis('equal', 'tight'); % Zoom out the plot so all data fits.
+    axis('tight'); % Zoom out the plot so all data fits.
     
     
 
