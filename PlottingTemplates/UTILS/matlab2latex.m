@@ -25,7 +25,19 @@ end
 % End LaTeX matrix string
 latex_matrix = strcat(latex_matrix, '\end{bmatrix}');
 
-% Display LaTeX matrix string
-disp(latex_matrix);
+% Display LaTeX matrix string (disabled)
+% disp(latex_matrix);
+
+% % Open the file for writing
+% fileID = fopen('fname,'w');
+% 
+% % Define the string to be written to the file
+% 
+% % Write the string to the file
+% fprintf(fileID,'%s',latex_matrix);
+% 
+% % Close the file
+% fclose(fileID);
+
 
 end

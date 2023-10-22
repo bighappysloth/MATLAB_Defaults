@@ -51,7 +51,7 @@ function PS = PLOT_STANDARDS()
     PS.Tiled.Global.TitleFontSize = 10;
     PS.Tiled.Global.AxisFontSize = 10;
     
-    PS.Tiled.SubPlot.TitleFontSize = 20;
+    PS.Tiled.SubPlot.TitleFontSize = 12;
     PS.Tiled.SubPlot.LegendFontSize = 9;
     PS.Tiled.SubPlot.AxisFontSize = 9;
     PS.Tiled.SubPlot.PlotTextFontSize = 9;
@@ -198,7 +198,7 @@ function PS = PLOT_STANDARDS()
     % LineStyles
     % '-', '--', ':', '-.'
     PS.DefaultLineStyle = '-';
-    PS.DefaultLineWidth = 0.75;
+    PS.DefaultLineWidth = 0.5;
 
     % MarkerStyles
     % 'o', '+', '*', 'x', 's'->squares, 'd'->diamonds, 'v'->triangles
@@ -208,15 +208,15 @@ function PS = PLOT_STANDARDS()
     %========================================================
     % LEGEND PROPERTIES
     
-    PS.DefaultLegendBoxLineWidth = 1.5;
+    PS.DefaultLegendBoxLineWidth = 0.5;
     PS.DefaultLegendLocation = 'northeast';
 
 
     %========================================================
     % AXIS DETAILS
     
-    PS.AxisTickLength = 0.01;
-    PS.AxisColor = PS.DGrey5;
+    PS.AxisTickLength = 0.005;
+    PS.AxisColor = PS.MyBlack;
     PS.AxisLabelColor = PS.MyBlack;
 
 
@@ -234,12 +234,12 @@ function PS = PLOT_STANDARDS()
 
 
     % Small
-    PS.save_small_TitleFontSize = 15;
-    PS.save_small_LegendFontSize = 11;
-    PS.save_small_AxisFontSize = 13;
-    PS.save_small_PlotTextFontSize = 12;
-    PS.save_small_AxisNumbersFontSize = 14;
-    PS.save_small_DefaultLineWidth = 1;
+    PS.save_small_TitleFontSize = 14;
+    PS.save_small_LegendFontSize = 9;
+    PS.save_small_AxisFontSize = 9;
+    PS.save_small_PlotTextFontSize = 10;
+    PS.save_small_AxisNumbersFontSize = 9;
+    PS.save_small_DefaultLineWidth = 0.5;
     PS.save_small_DefaultLegendBoxLineWidth = .7;
     
    
@@ -260,22 +260,22 @@ function PS = PLOT_STANDARDS()
 
 
     % Small
-    PS.Tiled.Global.save_small_TitleFontSize = 20;
+    PS.Tiled.Global.save_small_TitleFontSize = 12;
     PS.Tiled.Global.save_small_AxisFontSize = 12;
     
     PS.Tiled.SubPlot.save_small_TitleFontSize = 12;
-    PS.Tiled.SubPlot.save_small_LegendFontSize = 12;
+    PS.Tiled.SubPlot.save_small_LegendFontSize = 9;
     PS.Tiled.SubPlot.save_small_AxisFontSize = 12;
     PS.Tiled.SubPlot.save_small_PlotTextFontSize = 12;
     PS.Tiled.SubPlot.save_small_AxisNumbersFontSize = 12;
     
-    PS.Tiled.SubPlot.save_small_DefaultLineWidth = 1;
-    PS.Tiled.SubPlot.save_small_DefaultLegendBoxLineWidth = 1;
+    PS.Tiled.SubPlot.save_small_DefaultLineWidth = 0.75;
+    PS.Tiled.SubPlot.save_small_DefaultLegendBoxLineWidth = 0.75;
 
     
     
     % Set Figure Resolution
-    PS.save_DefaultResolution = 600;
+    PS.save_DefaultResolution = 2400;
 
 
 end
