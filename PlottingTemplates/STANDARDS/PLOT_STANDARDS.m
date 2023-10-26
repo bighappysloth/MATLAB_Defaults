@@ -236,7 +236,7 @@ function PS = PLOT_STANDARDS()
     % Small
     PS.save_small_TitleFontSize = 14;
     PS.save_small_LegendFontSize = 9;
-    PS.save_small_AxisFontSize = 9;
+    PS.save_small_AxisFontSize = 12;
     PS.save_small_PlotTextFontSize = 10;
     PS.save_small_AxisNumbersFontSize = 9;
     PS.save_small_DefaultLineWidth = 0.5;
