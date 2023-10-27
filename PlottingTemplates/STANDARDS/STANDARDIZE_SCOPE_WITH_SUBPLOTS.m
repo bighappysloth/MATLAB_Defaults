@@ -30,6 +30,7 @@ function STANDARDIZE_SCOPE_WITH_SUBPLOTS(h)
 
             lines = findall(ax, 'Type', 'Line');
             stairs = findall(ax, 'Type', 'stair');
+
             
             % Checks if the current scope has stairs instead of lines.
             % This occurs when it is the output of sampling... Matlab outputs stairs instead of lines
@@ -141,6 +142,7 @@ function STANDARDIZE_SCOPE_WITH_SUBPLOTS(h)
                 set(legendobj, 'Interpreter', 'latex');
                 
                 legend('location', 'northeast');
+                
             
             
                 ax.Color = [1 1 1];
